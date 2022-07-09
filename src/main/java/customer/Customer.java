@@ -6,13 +6,13 @@ public class Customer {
     private static int index = 0;
 
     public Customer() {
-        this.request = (int) (Math.random() * 8+2);
+        this.request = (int) (Math.random() * 5+2);
         this.name = "Customer"+index++;
     }
 
     public int request() throws InterruptedException {
         System.out.println("New customer "+ name + " has arrived!");
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         System.out.println(name + " has requested " + request + "$");
 
         return request;

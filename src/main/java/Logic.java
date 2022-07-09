@@ -12,6 +12,7 @@ public class Logic implements Runnable{
             try {
                 success=atm.cashOut(customer.request());
                 customer.reaction(success);
+                System.out.println("\n");
             } catch (InterruptedException ignored){}
         } while (success);
     }

@@ -1,11 +1,12 @@
 package bank;
 
 public class ATM {
-    private int balance=15;
+    private static int balance=15;
     public boolean cashOut(int request){
         if (request<=balance) {
             balance-=request;
-            System.out.println("The customer has received " + request+"$");
+            System.out.println("The customer has received " + request+"$.");
+            System.out.println("There are " +balance+"$ left");
             return true;
         }
         else {
